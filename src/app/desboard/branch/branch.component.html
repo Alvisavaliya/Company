@@ -1,0 +1,36 @@
+
+<table  class="table table-hover">
+    <thead>
+        <tr><th class="table-warning" scope="col"> Branch Id</th>
+            <th class="table-info" scope="col">Branch Name</th>
+            <th  class="table-primary" scope="col">Branch Count</th>
+            <th class="table-info" scope="col">Company Id</th>
+            <th  class="table-warning" colspan="2">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of BranchDetail">
+            <th scope="row">{{item.BranchId}}</th>
+            <td>{{item.BranchName}}</td>
+            <td>{{item.Branchcount}}</td>
+            <td>{{item.CompanyId}}</td>
+            <td align="center"><button class="btn btn-primary" *ngIf="EditBtn" (click)="editClick(item)">Edit</button></td>
+            <td align="center"><button class="btn btn-warning" *ngIf="DeleteBtn" (click)="DeleteBtnClick(item.BranchId)">delete</button></td>
+        </tr>
+    </tbody>
+</table>    
+
+
+<div *ngIf="EditFormVisible" class="container mt-5" >
+    <h1>UPDATE</h1>
+    <div class="col-md-3">
+      <div class="col-mb-3">
+        <input type="text" class="form-control" [(ngModel)]="BranchId">
+        <input type="text" class="form-control" [(ngModel)]="BranchName">
+        <input type="text" class="form-control" [(ngModel)]="Branchcount">
+        <input type="text" class="form-control"  [(ngModel)]="CompanyId">
+        <button class="btn btn-info mt-3" (click)="UpdateUSerDetails()">Update</button>
+      </div>
+    </div>
+  </div>
+

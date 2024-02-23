@@ -1,0 +1,60 @@
+<!-- <div class=".navbar-dark ">
+  <H4><input type="text" placeholder="Search...." [(ngModel)]="SearchItem" #searchVar></H4>
+  <h3><button (click)="onsearch(searchVar.value)" class="btn btn-secondary">Search</button></h3>
+  </div>
+   -->
+<div class="navbar-dark">
+  <h4><select name="gender" id="" [(ngModel)]="filterText">
+    <option value="All">All</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select></h4>
+</div>
+<table class="table table-hover">
+    <thead>
+        <tr><th class="table-warning" scope="col">  Id</th>
+            <th class="table-info" scope="col"> Name</th>
+            <th  class="table-primary" scope="col">Roll</th>
+            <th class="table-info" scope="col">AGE</th>
+            <th class="table-primary" scope="col">Gender</th>
+            <th  class="table-warning" colspan="2">Action</th>
+        </tr>
+    </thead>
+  
+   
+    <tbody *ngFor="let item of EmployeeDetail | filterpipe:filterText">
+      <tr>
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.roll}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.gender}}</td>
+       <td *ngIf="EditBtn" align="center"><button  class="btn btn-primary" (click)="EditClick(item)">Edit</button></td>
+       <td *ngIf="DeleteBtn" align="center"> <button class="btn btn-warning" (click)="DeleteRcd(item.id)">Delete</button></td>
+      </tr>
+    
+    </tbody>
+
+    <!-- <tr *ngFor="let item1 of filteredEmployees">
+      {{item1.name}} -- {{item1.age}}</tr>
+  </table> -->
+
+ 
+
+  <div *ngIf="EditFormVisible" class="container mt-5" >
+    <h1>UPDATE</h1>
+    <div class="col-md-3">
+      <div class="col-mb-3">
+        <input type="text" class="form-control" [(ngModel)]="id">
+        <input type="text" class="form-control" [(ngModel)]="name">
+        <input type="text" class="form-control" [(ngModel)]="roll">
+        <input type="text" class="form-control" [(ngModel)]="age">
+        <button class="btn btn-info mt-3" (click)="UpdateUSerDetails()">Update</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- <div *ngFor="let employee of EmployeeDetail">
+   
+  </div>
+   -->

@@ -1,0 +1,96 @@
+div
+{
+    margin-left: 20%;
+}
+h1
+{
+    margin-left: 25%;
+}
+
+/* Define styles for table */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse;
+}
+
+/* Define styles for table header */
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* Define styles for table header cells */
+.table th {
+
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+}
+
+/* Define styles for table body rows */
+.table tbody tr {
+    background-color: transparent;
+}
+
+/* Define styles for table cell data */
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+}
+
+/* Define styles for table rows when hovering */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+/* Define styles for table warning cells */
+.table-warning {
+    background-color: #ffeeba;
+}
+
+/* Define styles for table info cells */
+.table-info {
+    background-color: #d1ecf1;
+}
+
+/* Define styles for table primary cells */
+.table-primary {
+    background-color: #cfe2ff;
+}
+
+h4
+{
+ position: absolute;
+ right: 12%;
+ top: 3%;   
+}
+
+h3
+{
+ position: absolute;
+ right: 7%;
+ top: 3%;   
+}
+/*   
+  .navbar-dark button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    right: 150px;
+  }
+  
+  .navbar-dark button:hover {
+    background-color: #0056b3;
+  }
+  
+  .navbar-dark button:focus {
+    outline: none;
+  } */

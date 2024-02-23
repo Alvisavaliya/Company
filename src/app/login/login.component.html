@@ -1,0 +1,51 @@
+
+<div class="container">
+	<div class="screen">
+		<div class="screen__content">
+			
+			<form class="login" align="center">
+				<div class="login__field">
+					
+					<i class="login__icon fas fa-user"></i>
+					<input type="text" id="name" name="name" class="login__input" placeholder="User name / Email" #name>
+				</div>
+				<div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+					<input type="password" id="password" name="password"  class="login__input" placeholder="Password" #password>
+				</div>
+        <div class="login__field">
+					<i class="login__icon fas fa-lock"></i>
+                <!-- <select id="role" name="role" #roll>
+					
+                  <option value="Super Admin">Super Admin</option>
+                  <option value="admin">Admin</option>
+                  <option value="user">User</option>
+                </select> -->
+				</div>
+				<!-- <button class="button login__submit" (click)="onLogin(name.value , password.value, role.value)"> -->
+          <button class="button login__submit" (click)="onLogin()">
+					<span class="button__text">LogIn</span>
+					<i class="button__icon fas fa-chevron-right"></i>
+				</button>				
+				<p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account??/// <br><a [routerLink]="['/register']"
+					class="link-danger">Login</a></p>
+			</form>
+			<div class="social-login">
+				<div class="social-icons">
+					<a href="#" class="social-login__icon fab fa-instagram"></a>
+					<a href="#" class="social-login__icon fab fa-facebook"></a>
+					<a href="#" class="social-login__icon fab fa-twitter"></a>
+				</div>
+			</div>
+			
+		</div>
+		<div class="screen__background">
+			<span class="screen__background__shape screen__background__shape4"></span>
+			<span class="screen__background__shape screen__background__shape3"></span>		
+			<span class="screen__background__shape screen__background__shape2"></span>
+			<span class="screen__background__shape screen__background__shape1"></span>
+		</div>		
+	</div>
+	
+
+</div>

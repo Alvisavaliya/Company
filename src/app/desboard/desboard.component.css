@@ -1,0 +1,13 @@
+h2
+{
+    color: rgb(0, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
+    
+}
+li
+{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    text-shadow: 2px 3px #000101;
+}
